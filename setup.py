@@ -5,14 +5,6 @@ from __future__ import absolute_import, division, print_function
 # Ensure setuptools is available
 import sys
 
-try:
-    from ez_setup import use_setuptools
-    use_setuptools()
-except ImportError:
-    # Try to use ez_setup, but if not, continue anyway. The import is known
-    # to fail when installing from a tar.gz.
-    print('Could not import ez_setup', file=sys.stderr)
-
 from setuptools import setup
 
 install_reqs = ['urllib3',
